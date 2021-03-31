@@ -6,7 +6,7 @@
     <string name="coffee">Coffee</string>
     <string name="tea">Tea</string>
     <string name="drink">Drink?</string>
-    <string name="os">Operating System?</string>
+    <string name="os">Open Source OS?</string>
     <string name="windows">windows</string>
     <string name="linux">Linux</string>
     <string name="macos">Mac OS X</string>
@@ -14,4 +14,6 @@
     <string name="submit">Submit</string>
     <string name="score">Score</string>
     <string name="zero">0</string>
+    <string name="nuts">nuts</string>
+    <string name="framework">Framework?</string>
 </resources>

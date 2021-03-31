@@ -3,19 +3,17 @@ package labs.bamboo.quizapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.text.TextPaint;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText name;
+    private EditText framework;
     private RadioButton coffee;
-    private RadioButton tea;
+    private RadioButton nuts;
     private CheckBox windows;
     private CheckBox linux;
     private CheckBox macosx;
@@ -31,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initialize() {
-        name = findViewById(R.id.name);
+        framework = findViewById(R.id.framework);
         coffee = findViewById(R.id.coffee);
-        tea = findViewById(R.id.tea);
+        nuts = findViewById(R.id.nuts);
         windows = findViewById(R.id.windows);
         linux = findViewById(R.id.linux);
         macosx = findViewById(R.id.macosx);
@@ -46,27 +44,26 @@ public class MainActivity extends AppCompatActivity {
     public void validateQuiz(){
          int points = 0;
 
-         if( !name.getText().toString().equals("") &&
-                 !name.getText().toString().equals("Name") ){
+         if( framework.getText().toString().equals("Ruby on Rails") ){
             points += 25;
          }
 
          if( coffee.isChecked()  ){
             points += 25;
-         }else if( tea.isChecked() ){
+         }else if( nuts.isChecked() ){
             points += 0;
          }
 
          if ( windows.isChecked() ){
-             points -= 10;
+             points -= 15;
          }
 
          if ( linux.isChecked() ){
-             points += 15;
+             points += 25;
          }
 
          if ( macosx.isChecked() ){
-             points += 10;
+             points -= 10;
          }
 
          if( programming_language.getText().toString().equals("Ruby") ){
