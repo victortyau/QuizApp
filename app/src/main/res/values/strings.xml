@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">QuizApp</string>
+    <string name="developer_label">Developer</string>
+    <string name="choice_label">choice</string>
+    <string name="name">Name</string>
+    <string name="coffee">Coffee</string>
+    <string name="tea">Tea</string>
+    <string name="drink">Drink?</string>
+    <string name="os">Operating System?</string>
+    <string name="windows">windows</string>
+    <string name="linux">Linux</string>
+    <string name="macos">Mac OS X</string>
+    <string name="pl">Programming Language?</string>
+    <string name="submit">Submit</string>
+    <string name="score">Score</string>
+    <string name="zero">0</string>
 </resources>
