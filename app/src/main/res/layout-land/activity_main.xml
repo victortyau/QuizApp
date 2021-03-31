@@ -109,7 +109,7 @@
             </RadioGroup>
 
             <CheckBox
-                android:id="@+id/windows"
+                android:id="@+id/openbsd"
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
                 android:layout_alignParentStart="true"
@@ -117,7 +117,7 @@
                 android:layout_marginStart="188dp"
                 android:layout_marginTop="421dp"
                 android:fontFamily="@font/comfortaa"
-                android:text="@string/windows"
+                android:text="@string/openbsd"
                 android:textSize="18sp" />
 
             <EditText

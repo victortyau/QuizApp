@@ -17,4 +17,5 @@
     <string name="nuts">nuts</string>
     <string name="linux_creator">Linux Creator?</string>
     <string name="linux_written">Is Linux written in?</string>
+    <string name="openbsd">Open BSD</string>
 </resources>

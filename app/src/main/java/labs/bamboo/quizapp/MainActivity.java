@@ -2,7 +2,6 @@ package labs.bamboo.quizapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.Button;
@@ -17,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText linuxCreator;
     private RadioButton coffee;
     private RadioButton nuts;
-    private CheckBox windows;
+    private CheckBox openbsd;
     private CheckBox linux;
     private CheckBox macosx;
     private EditText programming_language;
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         linuxCreator = findViewById(R.id.linux_creator);
         coffee = findViewById(R.id.coffee);
         nuts = findViewById(R.id.nuts);
-        windows = findViewById(R.id.windows);
+        openbsd = findViewById(R.id.openbsd);
         linux = findViewById(R.id.linux);
         macosx = findViewById(R.id.macosx);
         programming_language = findViewById(R.id.programming_language);
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     public void validateQuiz(){
          int points = 0;
 
-         if( linuxCreator.getText().toString().equals("Ruby on Rails") ){
+         if( linuxCreator.getText().toString().equals("Linus Torvalds") ){
             points += 25;
          }
 
@@ -57,16 +56,8 @@ public class MainActivity extends AppCompatActivity {
             points += 0;
          }
 
-         if ( windows.isChecked() ){
-             points += 0;
-         }
-
-         if ( linux.isChecked() ){
+         if ( linux.isChecked() && openbsd.isChecked() && !macosx.isChecked() ){
              points += 25;
-         }
-
-         if ( macosx.isChecked() ){
-             points += 0;
          }
 
          if( programming_language.getText().toString().equals("C") ||
