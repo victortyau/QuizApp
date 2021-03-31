@@ -15,5 +15,6 @@
     <string name="score">Score</string>
     <string name="zero">0</string>
     <string name="nuts">nuts</string>
-    <string name="framework">Framework?</string>
+    <string name="linux_creator">Linux Creator?</string>
+    <string name="linux_written">Is Linux written in?</string>
 </resources>

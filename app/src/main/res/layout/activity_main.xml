@@ -68,7 +68,7 @@
                 android:textSize="30sp" />
 
             <EditText
-                android:id="@+id/framework"
+                android:id="@+id/linux_creator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -77,7 +77,7 @@
                 android:ems="10"
                 android:fontFamily="@font/comfortaa"
                 android:inputType="textPersonName"
-                android:text="@string/framework" />
+                android:text="@string/linux_creator" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -169,7 +169,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/pl"
+                android:id="@+id/linux_written"
                 android:layout_width="331dp"
                 android:layout_height="32dp"
                 android:layout_below="@+id/linux"
@@ -179,7 +179,7 @@
                 android:layout_marginTop="67dp"
                 android:layout_marginBottom="467dp"
                 android:fontFamily="@font/permanent_marker"
-                android:text="@string/pl"
+                android:text="@string/linux_written"
                 android:textSize="18sp" />
 
             <TextView

@@ -2,16 +2,19 @@ package labs.bamboo.quizapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText framework;
+    private EditText linuxCreator;
     private RadioButton coffee;
     private RadioButton nuts;
     private CheckBox windows;
@@ -29,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initialize() {
-        framework = findViewById(R.id.framework);
+        linuxCreator = findViewById(R.id.linux_creator);
         coffee = findViewById(R.id.coffee);
         nuts = findViewById(R.id.nuts);
         windows = findViewById(R.id.windows);
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     public void validateQuiz(){
          int points = 0;
 
-         if( framework.getText().toString().equals("Ruby on Rails") ){
+         if( linuxCreator.getText().toString().equals("Ruby on Rails") ){
             points += 25;
          }
 
@@ -55,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
          }
 
          if ( windows.isChecked() ){
-             points -= 15;
+             points += 0;
          }
 
          if ( linux.isChecked() ){
@@ -63,13 +66,20 @@ public class MainActivity extends AppCompatActivity {
          }
 
          if ( macosx.isChecked() ){
-             points -= 10;
+             points += 0;
          }
 
-         if( programming_language.getText().toString().equals("Ruby") ){
+         if( programming_language.getText().toString().equals("C") ||
+                 programming_language.getText().toString().equals("c") ){
             points += 25;
          }
 
          score_value.setText(String.valueOf(points));
+
+         String scoreMessage = "Total Score: "+String.valueOf(points);
+
+         Toast toast = Toast.makeText(getApplicationContext(), scoreMessage, Toast.LENGTH_LONG);
+         toast.setGravity(Gravity.CENTER, 0, 0);
+         toast.show();
     }
 }
